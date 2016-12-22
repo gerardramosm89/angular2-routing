@@ -26,16 +26,13 @@ export class User {
 
 export class AboutUserComponent{
 	user;
-	constructor(private route: ActivatedRoute){
+	constructor(private service: UserService, private route: ActivatedRoute){
 	
 	}
 	ngOnInit() {
 		//grab the current user
 		let username = this.route.snapshot.params['username'];
-		
-		this.user = users.find(function(user){
-			return user.username === username;
-		})
+		this.service.getUser(username).then(user => this.user = user);	
 
 	}
 }
