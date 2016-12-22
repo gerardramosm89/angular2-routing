@@ -1,26 +1,7 @@
 import { Component } from '@angular/core';
+import { User } from '../models/user';
+import { UserService } from '../shared/services/user.service';
 
-export class User {
-	id:number;
-	name: string;
-	username: string;
-	avatar: string;
-}
-const users: User[] = [
-	{
-		id: 1,
-		name: 'Gerry',
-		username: 'gerardramosm89',
-		avatar: 'https://avatars3.githubusercontent.com/u/22526582?v=3&s=460'
-	},
-  {
-    id: 2,
-    name: 'Chris',
-    username: 'csawtelle',
-		avatar: 'https://avatars1.githubusercontent.com/u/12061655?v=3&s=400'
-  }
-
-]
 @Component({
   selector: 'about-page',
 	styles:[`
@@ -46,5 +27,11 @@ const users: User[] = [
 })
 
 export class AboutComponent {
-	users: Users[] = users;
+	users: Users[];
+	constructor(private service: UserService){
+	
+	}
+	ngOnInit(){
+		this.service.getUsers().then(users => this.users = users);
+	}
 }
