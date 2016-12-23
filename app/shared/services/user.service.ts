@@ -25,7 +25,6 @@ export class UserService{
 	}
 
 	getUser(username) {
-
 		return usersPromise.then(users => users.find(user => user.username === username));
 	}
 }
