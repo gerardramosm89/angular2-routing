@@ -4,6 +4,7 @@ import { AboutComponent } from './about.component';
 import { AboutUserComponent } from './about-user.component';
 import { UserService } from '../shared/services/user.service';
 import { aboutRouting } from './about.routing';
+import { AboutSectionComponent } from './about-section.component';
 @NgModule({
 	imports: [
 		CommonModule,
@@ -11,7 +12,8 @@ import { aboutRouting } from './about.routing';
 	],
 	declarations: [
 		AboutComponent,
-		AboutUserComponent
+		AboutUserComponent,
+		AboutSectionComponent
 	],
 	providers: [
 		UserService
