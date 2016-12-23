@@ -7,7 +7,7 @@ import { Component } from '@angular/core';
 			background-color: #fff !important;
 		}
 	`],
-	templateUrl: './app/app.component.html'; 
+	templateUrl: './app/app.component.html',
 })
 export class AppComponent {
   message = 'This is the sample message.';
