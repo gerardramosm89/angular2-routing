@@ -26,7 +26,7 @@ import { UserService } from '../shared/services/user.service';
 
           <h2>{{ user.name }}</h2>
           
-          <p><a href="https://twitter.com/{{ user.username }}">
+          <p><a href="https://github.com/{{ user.username }}">
             {{ user.username }}
           </a></p>
         </div>
