@@ -1,6 +1,9 @@
 import { ModuleWithProviders } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { DashboardComponent } from './dashboard.component';
+import { DashboardUsersComponent } from './users/dashboard-users.component';
+import { DashboardUsersHomeComponent } from './users/dashboard-users-home.component';
+import { DashboardUserDetailsComponent } from './users/dashboard-user-details.component';
 
 export const dashboardRoutes: Routes = [
 	{
@@ -28,4 +31,4 @@ export const dashboardRoutes: Routes = [
 	}
 ];
 
-export const dashboardRouting: ModuleWithProvider = RouterModule.forChild(dashboardRoutes);
+export const dashboardRouting: ModuleWithProviders = RouterModule.forChild(dashboardRoutes);
