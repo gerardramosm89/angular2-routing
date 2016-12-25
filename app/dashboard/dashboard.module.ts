@@ -5,7 +5,7 @@ import { dashboardRouting } from './dashboard.routing';
 import { DashboardUsersComponent } from './users/dashboard-users.component';
 import { DashboardUsersHomeComponent } from './users/dashboard-users-home.component';
 import { DashboardUserDetailsComponent } from './users/dashboard-user-details.component';
-
+import { UserService } from '../shared/services/user.service';
 @NgModule({
   imports: [
     CommonModule,
@@ -18,6 +18,7 @@ import { DashboardUserDetailsComponent } from './users/dashboard-user-details.co
     DashboardUserDetailsComponent
   ],
   providers: [
-  ]
+	UserService
+	]
 })
 export class DashboardModule {}
