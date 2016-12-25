@@ -18,6 +18,7 @@ export class AboutUserResolve implements Resolve<User> {
 				console.log("This user from service.getUser is: ", user);
 				return user;
 			} else {
+				console.log("User does not exist");
 				this.router.navigate['/about'];
 				return false;
 			}
